@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  octoprint:
+    image: octoprint/octoprint
+    container_name: octoprint
+    ports:
+      - "5000:5000"
+    restart: always
+    volumes:
+      - ./octoprint/data:/octoprint/data
+      - ./octoprint/config:/octoprint/config
+      - ./octoprint/uploads:/octoprint/uploads
+
